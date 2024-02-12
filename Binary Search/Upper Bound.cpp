@@ -6,11 +6,11 @@ int upperBound(vector<int> &arr, int x, int n){
 	while(low<=high)
 	{
 		int mid=low +(high-low)/2;
-		if(arr[mid]<=x)
+		if(arr[mid]>x)
 		{
 			ans=mid;
-			low=mid+1;
+			high=mid-1;
 		}
-		else high=mid-1;
+		else low=mid+1;
 	}	
 }
